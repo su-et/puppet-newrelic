@@ -37,7 +37,10 @@ class newrelic::params {
           id     => 'B60A3EC9BC013B9C23790EC8B31B29E5548C16BF',
           source => 'https://download.newrelic.com/548C16BF.gpg',
         },
-        include_src => false,
+        include  => {
+          src => false,
+          deb => true,
+        },
         release     => 'newrelic',
       }
       case $::operatingsystem {
